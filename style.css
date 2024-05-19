@@ -1,0 +1,160 @@
+/* Reset and Base Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #444;
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+/* Parallax Sections */
+.pimg1, .pimg2, .pimg3, .pimg4, .pimg5 {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  animation: slide 10s infinite alternate;
+}
+
+@keyframes slide {
+  0% { background-position: center; }
+  50% { background-position: center 80%; }
+  100% { background-position: center; }
+}
+
+.pimg1 {
+  background-image: url('images/japan1.jpg');
+}
+
+.pimg2 {
+  background-image: url('images/japan11.jpg');
+}
+
+.pimg3 {
+  background-image: url('images/japan2.jpg');
+}
+
+.pimg4 {
+  background-image: url('images/japan10.jpg');
+}
+
+.pimg5 {
+  background-image: url('images/japan15.jpg');
+}
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.textBg {
+  background: rgba(50, 50, 50, 0.8); /* Dark grey with some transparency */
+  display: inline-block;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Section Styles */
+.section {
+  padding: 60px 80px;
+  text-align: center;
+}
+
+.section-light {
+  background-color: #f4f4f4;
+  color: #444;
+}
+
+.section-dark {
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .ptext {
+    font-size: 2.5em;
+    letter-spacing: 4px;
+  }
+
+  h2 {
+    font-size: 2.2em;
+  }
+
+  p {
+    font-size: 1.1em;
+  }
+
+  .section {
+    padding: 50px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ptext {
+    font-size: 2em;
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .section {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ptext {
+    font-size: 1.5em;
+    letter-spacing: 1px;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+
+  .section {
+    padding: 30px 15px;
+  }
+}
